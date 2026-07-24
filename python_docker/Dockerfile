@@ -6,6 +6,8 @@ LABEL org.opencontainers.image.source="https://github.com/evertri/evertri-docker
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+        awscli \
+        jq \
         libreoffice-writer \
         fonts-noto-cjk \
     && rm -rf /var/lib/apt/lists/*
